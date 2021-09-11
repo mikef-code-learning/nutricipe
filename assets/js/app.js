@@ -21,9 +21,8 @@ function displayRecipes(){
                 //create a block to contain each image and recipe
                 var recipeCard = $('<div>');
                 recipeCard.addClass('card');
-                recipeCard.attr("style", "width: 18rem; border: solid;");
                 recipeCard.attr('data-id', response.meals[d].idMeal);
-                recipeCard.attr('class', 'm-2');
+                recipeCard.attr('class', 'm-2 recipe-card');
                 //displays the list of recipes as cards
                 var recipeImg = $("<img>");
                 recipeImg.addClass("card-img-top");
@@ -50,3 +49,8 @@ $("#button-addon2").on("click", function(e) {
     displayRecipes();
 });
 
+
+$(document).on("click", ".recipe-card", function(e) {
+    e.preventDefault();
+    $('#recipe-modal').modal('show');
+});

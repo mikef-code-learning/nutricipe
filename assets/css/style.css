@@ -1,0 +1,9 @@
+.recipe-card {
+    cursor: pointer;
+    width: 21rem;
+    border: solid;
+}
+
+.recipe-card:hover {
+    border-color: crimson;
+}
